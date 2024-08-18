@@ -5,15 +5,17 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".precodocombus">
+    tools:context=".consumocarro">
+
+
 
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="Preço do Combustível"
+        android:text="Consumo do Carro"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,14 +23,14 @@
         app:layout_constraintBottom_toBottomOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Passo 1 de 3"
-        android:textColor="@color/vemelho_puro"
+        android:text="Passo 2 de 3"
         android:textSize="16dp"
-        app:layout_constraintStart_toStartOf="@+id/textView1"
-        app:layout_constraintTop_toBottomOf="@+id/textView1"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:textColor="@color/vemelho_puro"
         />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -49,18 +51,19 @@
         android:id="@+id/textInputEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Ex: R$4,00"
+        android:hint="Ex: 6 km/L"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
         android:inputType="numberDecimal"
-        android:maxLength="5"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        android:maxLength="5"/>
 
     <Button
-        android:id="@+id/proximo1"
+        android:id="@+id/proximo2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30sp"
         android:text="Próximo"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="16dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
