@@ -8,22 +8,19 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class precodocombus : AppCompatActivity() {
+class consumocarro : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_precodocombus)
+        setContentView(R.layout.activity_consumocarro)
 
-        val proximo1 = findViewById<Button>(R.id.proximo1)
+        val proximo2 = findViewById<Button>(R.id.proximo2)
 
-        proximo1.setOnClickListener {
+        proximo2.setOnClickListener {
 
-            val intent = Intent (this, consumocarro ::class.java)
+            val intent = Intent(this, quilometragem::class.java)
             startActivity(intent)
 
+
         }
-
-
-
     }
-
 }
