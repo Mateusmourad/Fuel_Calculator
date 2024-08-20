@@ -7,7 +7,19 @@
     android:layout_height="match_parent"
     tools:context=".consumocarro">
 
+    <LinearLayout
+        android:id="@+id/vg_precodocombus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/azul_meia_noite"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+
+    </LinearLayout>
 
 
     <TextView
@@ -17,7 +29,9 @@
         android:gravity="center_horizontal"
         android:text="Consumo do Carro"
         android:textSize="32sp"
+        android:textColor="@color/white"
         android:textStyle="bold"
+        android:layout_marginStart="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
@@ -43,18 +57,26 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="24dp"
-        app:hintEnabled="false">
+        app:hintEnabled="false"
+        app:hintTextColor="@color/white">
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/textInputEditText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:hint="Ex: 6 km/L"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
         android:inputType="numberDecimal"
-        android:maxLength="5"/>
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:maxLength="5"
+        android:background="@color/gray"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
         android:id="@+id/proximo2"
