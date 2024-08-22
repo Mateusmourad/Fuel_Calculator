@@ -18,13 +18,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_margin="60dp"
-            android:src="@drawable/bombavermelha" />
-
-
     </LinearLayout>
 
 
@@ -71,7 +64,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText"
+        android:id="@+id/edt_precocombus"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/gray"
