@@ -4,31 +4,23 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
-import androidx.activity.result.ActivityResult
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class MainActivity : AppCompatActivity() {
-
+class telaresultado : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_telaresultado)
+
+        val getResultadoFinal = intent.getFloatExtra("ChaveDistancia", 0f)
 
 
-        val button = findViewById<Button>(R.id.button)
 
-        button.setOnClickListener {
-
-            val intent = Intent(this, precodocombus::class.java)
-            startActivity(intent)
-            println("Mateus acao do botao")
-
-
+        val novoCalculo = findViewById<Button>(R.id.btn_calculo)
+        novoCalculo.setOnClickListener {
+            val mainScreen = Intent(this, MainActivity::class.java)
+            startActivity(mainScreen)
         }
-
-
-
     }
-
 }
