@@ -11,14 +11,14 @@ import androidx.core.view.WindowInsetsCompat
 
 const val KEY_CONSUMO = "ChaveConsumo"
 const val KEY_COMBUSTIVEL = "ChaveCombustivel"
-const val KEY_DISTANCIA = "ChaveDistancia"
+const val chaveDistancia = "ResultadoFinal"
 
 class telaresultado : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_telaresultado)
 
-        val resultadoFinal = intent.getFloatExtra(KEY_DISTANCIA, 0f)
+        val resultadoFinal = intent.getFloatExtra("chaveDistancia", 0f)
 
         println("Mateus acao do botao + result")
 

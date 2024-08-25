@@ -18,7 +18,7 @@ class consumocarro : AppCompatActivity() {
 
         val edtconsumo = findViewById<TextInputEditText>(R.id.edt_consumo)
 
-        val preco_combus = intent.getFloatExtra("KEY_COMBUSTIVEL", 0f)
+        val preco_combus = intent.getFloatExtra("KEY_COMBUSTIVEL", 0.1f)
 
             proximo2.setOnClickListener {
 
