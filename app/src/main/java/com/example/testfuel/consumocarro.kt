@@ -17,14 +17,16 @@ class consumocarro : AppCompatActivity() {
         val proximo2 = findViewById<Button>(R.id.proximo2)
 
         val edtconsumo = findViewById<TextInputEditText>(R.id.edt_consumo)
-        val valorCombustivel = intent.getFloatExtra("KEY_COMBUSTIVEL", 0f)
 
-        proximo2.setOnClickListener {
+        val preco_combus = intent.getFloatExtra("KEY_COMBUSTIVEL", 0f)
+
+            proximo2.setOnClickListener {
 
             val consumo : Float = edtconsumo.text.toString().toFloat()
 
             val intent = Intent(this, quilometragem::class.java)
                 .apply {
+                    putExtra("KEY_COMBUSTIVEL", preco_combus)
                     putExtra ("KEY_CONSUMO", consumo)
 
                 }
