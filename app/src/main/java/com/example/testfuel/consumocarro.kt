@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 
 class consumocarro : AppCompatActivity() {
@@ -21,6 +22,7 @@ class consumocarro : AppCompatActivity() {
         val preco_combus = intent.getFloatExtra("KEY_COMBUSTIVEL", 0.1f)
 
             proximo2.setOnClickListener {
+
 
             val consumo : Float = edtconsumo.text.toString().toFloat()
 
