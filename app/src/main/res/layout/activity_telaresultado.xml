@@ -3,31 +3,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".telaresultado">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/result_main"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".telaresultado"
+    android:background="@color/azul_meia_noite">
+
+    <LinearLayout
+
+        android:id="@+id/tela_resul1"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_bg1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seu custo estimado de combustível é:"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="16dp"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="76sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:maxLength="8"
+            android:gravity="center"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="48dp"
+            tools:text="$23.6" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_classificacao"
+            android:textSize="32sp"
+            tools:text="20" />
+
+
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/tv_result"
-        android:textSize="40sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="23.6" />
+        android:text="Conduza com segurança e economize no proóximo abastecimento."
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="80dp"
+        />
 
     <TextView
-        android:id="@+id/tv_classificacao"
-        android:textSize="32sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="20" />
+        android:text="Boa viagem!"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="60dp" />
 
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
-    <Button
-        android:id="@+id/btn_calculo"
-        android:layout_width="200dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="5dp"
-        android:layout_gravity="center_vertical"
-        android:layout_marginBottom="60dp"
-        android:text="Button" />
-
+  <Button
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/btn_calculo"
+      android:text="Novo Cálculo"
+      android:layout_margin="30sp" />
 
 </LinearLayout>
+
+
+
+
+
+
+
+
+
+
