@@ -2,5 +2,6 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.TESTFUEL" parent="Theme.Material3.DayNight.NoActionBar">
             <item name="colorPrimary"> @color/azul_complementar </item>
+        <item name="android:statusBarColor">@color/azul_meia_noite</item>
     </style>
 </resources>
