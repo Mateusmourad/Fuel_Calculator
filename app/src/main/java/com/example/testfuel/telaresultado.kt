@@ -24,7 +24,6 @@ class telaresultado : AppCompatActivity() {
 
         val tvResult = findViewById<TextView>(R.id.tv_result)
 
-        val tvClassificacao = findViewById<TextView>(R.id.tv_classificacao)
 
         tvResult.text= resultadoFinal.toString()
 
