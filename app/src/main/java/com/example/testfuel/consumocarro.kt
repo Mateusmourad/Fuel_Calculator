@@ -21,19 +21,26 @@ class consumocarro : AppCompatActivity() {
 
         val preco_combus = intent.getFloatExtra("KEY_COMBUSTIVEL", 0.1f)
 
+        val consume = edtconsumo.text
+
             proximo2.setOnClickListener {
 
+                if (consume.toString().isNotEmpty()) {
 
-            val consumo : Float = edtconsumo.text.toString().toFloat()
 
-            val intent = Intent(this, quilometragem::class.java)
-                .apply {
-                    putExtra("KEY_COMBUSTIVEL", preco_combus)
-                    putExtra ("KEY_CONSUMO", consumo)
+                    val consumo: Float = edtconsumo.text.toString().toFloat()
 
+                    val intent = Intent(this, quilometragem::class.java)
+                        .apply {
+                            putExtra("KEY_COMBUSTIVEL", preco_combus)
+                            putExtra("KEY_CONSUMO", consumo)
+
+                        }
+                    startActivity(intent)
+                }else{
+                    Snackbar.make(edtconsumo,"Preencha o campo vazio", Snackbar.LENGTH_LONG)
+                        .show()
                 }
-            startActivity(intent)
-
 
         }
     }
