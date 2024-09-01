@@ -19,15 +19,24 @@ class precodocombus : AppCompatActivity() {
 
         val proximo1 = findViewById<Button>(R.id.proximo1)
 
+        val preco = edtprecocombus.text
+
+
         proximo1.setOnClickListener {
+
+            if (preco.toString().isNotEmpty()) {
 
             val preco_combus: Float = edtprecocombus.text.toString().toFloat()
 
-            val intent = Intent (this, consumocarro ::class.java)
+            val intent = Intent(this, consumocarro::class.java)
                 .apply {
                     putExtra("KEY_COMBUSTIVEL", preco_combus)
                 }
             startActivity(intent)
+
+        } else {
+            Snackbar.make(edtprecocombus, "Preencha o campo vazio", Snackbar.LENGTH_LONG)
+                .show() }
 
         }
 
